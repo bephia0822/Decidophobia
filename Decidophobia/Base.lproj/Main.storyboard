@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rabbit Garden.otf">
+            <string>RabbitGarden</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Decidophobia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alice2" translatesAutoresizingMaskIntoConstraints="NO" id="bgD-5A-h6I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter what you can't decide" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgN-j9-H1U">
+                                <rect key="frame" x="36" y="200" width="230" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="xhu-bK-7jg"/>
+                                    <constraint firstAttribute="height" constant="34" id="xlz-qu-fWP"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr0-i6-Igj">
+                                <rect key="frame" x="278" y="200" width="65" height="34"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="OGb-4y-FGo"/>
+                                    <constraint firstAttribute="height" constant="34" id="XAG-Vj-UYx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RabbitGarden" family="Rabbit Garden" pointSize="20"/>
+                                <state key="normal" title="enter">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cja-g2-pUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAt-2Z-IYE">
+                                <rect key="frame" x="128.5" y="547" width="118" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="7GN-H4-Tif"/>
+                                    <constraint firstAttribute="width" constant="118" id="qL9-Dq-JCl"/>
+                                </constraints>
+                                <state key="normal" image="START-removebg"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uw4-rY-fgD"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-Ya-RBy">
+                                <rect key="frame" x="0.0" y="264" width="375" height="283"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5GQ-ic-MGz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5GQ-ic-MGz" id="zsu-rD-iEV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QAt-2Z-IYE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7WY-Nh-9aX"/>
+                            <constraint firstAttribute="bottom" secondItem="bgD-5A-h6I" secondAttribute="bottom" id="9Rd-9u-kMN"/>
+                            <constraint firstItem="bgD-5A-h6I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CcN-9b-aE1"/>
+                            <constraint firstItem="pr0-i6-Igj" firstAttribute="centerY" secondItem="NgN-j9-H1U" secondAttribute="centerY" id="Rxz-v3-G1e"/>
+                            <constraint firstAttribute="trailing" secondItem="bgD-5A-h6I" secondAttribute="trailing" id="SB2-Fy-sd5"/>
+                            <constraint firstItem="TbA-Ya-RBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SI3-3G-efe"/>
+                            <constraint firstItem="pr0-i6-Igj" firstAttribute="leading" secondItem="NgN-j9-H1U" secondAttribute="trailing" constant="12" id="aO9-hp-4q0"/>
+                            <constraint firstAttribute="trailing" secondItem="TbA-Ya-RBy" secondAttribute="trailing" id="b1K-L7-yb9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TbA-Ya-RBy" secondAttribute="bottom" constant="120" id="e6Y-Ha-C2l"/>
+                            <constraint firstItem="NgN-j9-H1U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="gTd-AX-Wc6"/>
+                            <constraint firstItem="bgD-5A-h6I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hVT-9h-zaC"/>
+                            <constraint firstAttribute="bottom" secondItem="QAt-2Z-IYE" secondAttribute="bottom" constant="13" id="ke6-QN-X9t"/>
+                            <constraint firstItem="TbA-Ya-RBy" firstAttribute="top" secondItem="NgN-j9-H1U" secondAttribute="bottom" constant="30" id="mNZ-o9-RpQ"/>
+                            <constraint firstItem="NgN-j9-H1U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="nhZ-IL-p0Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTableView" destination="TbA-Ya-RBy" id="AWl-2l-Abo"/>
+                        <outlet property="myTextInput" destination="NgN-j9-H1U" id="uMf-eg-4Sq"/>
+                        <segue destination="gA6-Mo-xhP" kind="presentation" identifier="goToResult" id="zY7-C9-XBE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="7VD-Mc-K12">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="gA6-Mo-xhP" customClass="ResultViewController" customModule="Decidophobia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBg-nO-1IQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Alice 2純背景" highlightedImage="Alice純背景" translatesAutoresizingMaskIntoConstraints="NO" id="pwb-lZ-ver">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTK-Ur-dhM">
+                                <rect key="frame" x="128.5" y="527" width="118" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="mOu-SX-nw6"/>
+                                    <constraint firstAttribute="width" constant="118" id="v4B-bt-uNQ"/>
+                                </constraints>
+                                <state key="normal" image="RESTART-removebg"/>
+                                <connections>
+                                    <action selector="restartPressed:" destination="gA6-Mo-xhP" eventType="touchUpInside" id="v6e-kz-IAQ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="57E-Gz-vgd">
+                                <rect key="frame" x="11.5" y="35" width="352" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="352" id="jSm-eP-CpD"/>
+                                    <constraint firstAttribute="height" constant="300" id="yj3-bD-uVb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResultLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-4s-WCf">
+                                <rect key="frame" x="64" y="426" width="247" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Qzx-jI-i48"/>
+                                    <constraint firstAttribute="width" constant="247" id="lxx-SV-c3i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RabbitGarden" family="Rabbit Garden" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KoX-Kl-FWO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="57E-Gz-vgd" firstAttribute="centerX" secondItem="LBg-nO-1IQ" secondAttribute="centerX" id="3we-l7-XAm"/>
+                            <constraint firstItem="BTK-Ur-dhM" firstAttribute="centerX" secondItem="LBg-nO-1IQ" secondAttribute="centerX" id="N5X-KH-3UG"/>
+                            <constraint firstItem="57E-Gz-vgd" firstAttribute="top" secondItem="LBg-nO-1IQ" secondAttribute="top" constant="35" id="Omv-Eg-IJA"/>
+                            <constraint firstItem="OGy-4s-WCf" firstAttribute="leading" secondItem="LBg-nO-1IQ" secondAttribute="leading" constant="64" id="PEu-kh-uxv"/>
+                            <constraint firstItem="pwb-lZ-ver" firstAttribute="centerX" secondItem="LBg-nO-1IQ" secondAttribute="centerX" id="T6o-Z1-4RK"/>
+                            <constraint firstAttribute="trailing" secondItem="pwb-lZ-ver" secondAttribute="trailing" id="d4W-D3-NbH"/>
+                            <constraint firstItem="OGy-4s-WCf" firstAttribute="centerX" secondItem="LBg-nO-1IQ" secondAttribute="centerX" id="fxv-K8-77u"/>
+                            <constraint firstItem="BTK-Ur-dhM" firstAttribute="top" secondItem="OGy-4s-WCf" secondAttribute="bottom" constant="50" id="icw-cV-Q9J"/>
+                            <constraint firstAttribute="trailing" secondItem="OGy-4s-WCf" secondAttribute="trailing" constant="64" id="jcq-LL-AUl"/>
+                            <constraint firstAttribute="bottom" secondItem="BTK-Ur-dhM" secondAttribute="bottom" constant="13" id="oKR-fk-wju"/>
+                            <constraint firstItem="pwb-lZ-ver" firstAttribute="top" secondItem="LBg-nO-1IQ" secondAttribute="top" id="q9S-Mw-GMx"/>
+                            <constraint firstItem="pwb-lZ-ver" firstAttribute="leading" secondItem="LBg-nO-1IQ" secondAttribute="leading" id="w4U-11-jab"/>
+                            <constraint firstAttribute="bottom" secondItem="pwb-lZ-ver" secondAttribute="bottom" id="xOq-R8-upK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rga-Sb-yfP"/>
+                    <connections>
+                        <outlet property="myGifView" destination="57E-Gz-vgd" id="JDw-0U-8bj"/>
+                        <outlet property="resultLabel" destination="OGy-4s-WCf" id="uuB-5Q-ld3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWK-vJ-dcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.60000000000002" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Alice 2純背景" width="250" height="444.5"/>
+        <image name="Alice2" width="250" height="444.5"/>
+        <image name="Alice純背景" width="250" height="444.5"/>
+        <image name="RESTART-removebg" width="166.5" height="166.5"/>
+        <image name="START-removebg" width="166.5" height="166.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
